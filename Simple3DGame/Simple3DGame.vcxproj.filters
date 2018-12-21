@@ -1,0 +1,1758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>0b9f7ff6-f8f8-41c3-a0a3-553f04336df5</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>64c9977c-a2a1-430b-8ff5-2ab601820c4a</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="Common\StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClCompile Include="Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClInclude Include="Content\Sample3DSceneRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\SampleFpsTextRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\ShaderStructures.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClCompile Include="Content\Sample3DSceneRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\SampleFpsTextRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <FxCompile Include="Content\SamplePixelShader.hlsl">
+      <Filter>Content</Filter>
+    </FxCompile>
+    <FxCompile Include="Content\SampleVertexShader.hlsl">
+      <Filter>Content</Filter>
+    </FxCompile>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{d1a3b067-59e5-47d7-be70-952a1e62c21f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>cba7393c-0b10-473b-a058-11f5d5912af6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Skyboxes">
+      <UniqueIdentifier>{af13c44d-ec8d-4eb0-a69e-8b742896af04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Ground">
+      <UniqueIdentifier>{20a6b87d-f8ec-44e9-962f-e69449775c8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\LevelInfo">
+      <UniqueIdentifier>{7d4411f6-217e-4294-a509-1ddc42bafe7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Levelthumbs">
+      <UniqueIdentifier>{8f932463-8548-47eb-8606-3e10a3d58d88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\MusicTracks">
+      <UniqueIdentifier>{50b3194a-71af-406c-be7a-120f0ba179ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\TerrainMaps">
+      <UniqueIdentifier>{bdadf40f-7c26-4776-b75d-74f00624e8aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\LevelBinary">
+      <UniqueIdentifier>{242cbe91-2769-4432-a540-492e5ddb95a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\LevelBinary\BoxData">
+      <UniqueIdentifier>{b6e29307-7ffb-4ae2-9a1f-f2bc7cda5b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\LevelBinary\FruitData">
+      <UniqueIdentifier>{307c21d2-672c-4a83-99c5-73af3272b685}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\LevelBinary\RayData">
+      <UniqueIdentifier>{0c9edc1f-e27c-4a86-ad95-8f5868bf0485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\LevelBinary\StaticData">
+      <UniqueIdentifier>{1d6ed93d-175c-4618-9bb8-cdc83ea4d2a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\LevelBinary\TreeData">
+      <UniqueIdentifier>{1c5bb12a-71a4-402e-aa48-78188b8f9414}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Textures">
+      <UniqueIdentifier>{b4ddca11-b0d9-4328-8538-658e5ad7fd81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Models">
+      <UniqueIdentifier>{aed352dc-8dd5-4357-96c5-6ee78dd4ec33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Sounds">
+      <UniqueIdentifier>{84a72935-8e76-4be4-b7ed-0d51c162a815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{c3818023-079f-4d1f-8138-43c0095cbb3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FX">
+      <UniqueIdentifier>{436a935d-5693-4ba6-9bf7-0e9e8ea30fdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Skyboxes\Low">
+      <UniqueIdentifier>{38d0c0ba-0b1a-4c82-924b-5fe43792d5c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="DirectXPage.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="SoundEffect.cpp" />
+    <ClCompile Include="StereoProjection.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="Stage.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveLookController.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="TouchClass.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Simple3DGameMain.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicLoader.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicReaderWriter.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewModel.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaReader.cpp" />
+    <ClCompile Include="MediaStreamer.cpp" />
+    <ClCompile Include="Statics.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Sky.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Trees.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Boxes.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Cash.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Fruit.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Snow.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Sparticle.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Splash.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Rain.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Dots.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Shoot.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Fence.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Fire.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Points.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Explode.cpp">
+      <Filter>FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Textures.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldObject.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp" />
+    <ClCompile Include="Modicle.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoader.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Flag.cpp" />
+    <ClCompile Include="FlagNode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="DirectXPage.xaml.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="ShaderStructures.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="SoundEffect.h" />
+    <ClInclude Include="StereoProjection.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="DirectXSample.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="Stage.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveLookController.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="TouchClass.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple3DGameMain.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicLoader.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicShapes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicReaderWriter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewModel.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUIControl.h" />
+    <ClInclude Include="MediaReader.h" />
+    <ClInclude Include="MediaStreamer.h" />
+    <ClInclude Include="Statics.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Sky.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Trees.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Boxes.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Cash.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Fruit.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Snow.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Sparticle.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Splash.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Rain.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Dots.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Shoot.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Fence.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Fire.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Points.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Explode.h">
+      <Filter>FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Textures.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldObject.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h" />
+    <ClInclude Include="Modicle.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoader.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Flag.h" />
+    <ClInclude Include="FlagNode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\AlignmentGrid.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\ApplicationIcon.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\arow.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\menu_lines.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Lock.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\NewSquare.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\blueocean.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\desert.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\moon.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\sunny.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Ground\bluestone.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Ground\browndirt.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Ground\brownrocks.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Ground\green.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Ground\redsquares.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Ground\snow.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\1.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\2.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\3.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\4.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\5.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\6.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\7.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\8.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\9.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\10.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\11.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Textures\back_tex.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\banana.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\barrel.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\barrelColor.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\beachball.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\blob.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Box_sci.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\cartex.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\cherries.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\coin-texture.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\cokecan.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\cone.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\crate.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\display.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\earth_sphere.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\enigma1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\explosion.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\fin-flag.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\fin-flag-ok.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\fin-flag-ok-not.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\flame_0.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\foot_ball.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\ghost_tex1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\ghost_tex2.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\gold.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Granite_Dark.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\grass.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Grey.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\ice.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\leaves.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Lock.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Marble.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\melon.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\menu-background.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\menu-item.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\mushroomblue.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\mushroomgreen.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\mushroompurple.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\mushroomred.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\old_grate.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\orange.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Pear.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\pica.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\pill.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\points.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\poke.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Preta.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\rain_drop.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\red_apple.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sand.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\seafloor.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sf1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sf2.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sf3.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sf4.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sf5l.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sf6.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sf7.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sf8.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sfall.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sfall1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\skull.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Skybox.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\snow.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\spark.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\sphere.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\spot.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\stage1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\stage2.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\stained1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Star_coin.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\stone1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\stripes.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\ten_points.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Tiny_skin.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\trans_marble.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\tree_001.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\tree_bark.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\trunk.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\verticalstripes.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\wheel_tex1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\windowslogo.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\wooden-fence-hi.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\woodfin.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\woodfloor.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\yell.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\arow_long.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\FullGame.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\beam.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\wheel_tex2.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\blueocean.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\desert.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\moon.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\sunny.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\winter.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\winter.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\12.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\13.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\14.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\15.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\16.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\17.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\18.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\19.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Levelthumbs\20.png">
+      <Filter>Assets\Levelthumbs</Filter>
+    </Image>
+    <Image Include="Assets\Textures\rock_tex.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\1.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\2.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\3.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\1.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\2.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\3.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\1.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\2.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\3.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\1.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\2.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\3.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\2.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\3.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\Textures\dice.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\cat.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\DUCK.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\log.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\crystal2.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\stump.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\palm_base.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\palm_top.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\goat.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Ground\water.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Textures\carshade3.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\screenshot1.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\4.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\5.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\6.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\7.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\8.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\9.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\10.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\11.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\12.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\13.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\14.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\BoxData\15.bmp">
+      <Filter>Assets\LevelBinary\BoxData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\4.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\5.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\6.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\7.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\8.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\9.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\10.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\11.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\12.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\13.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\14.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\FruitData\15.bmp">
+      <Filter>Assets\LevelBinary\FruitData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\4.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\5.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\6.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\7.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\8.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\9.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\10.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\11.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\12.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\13.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\14.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\15.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\4.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\5.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\6.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\7.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\8.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\9.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\10.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\11.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\12.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\13.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\14.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\StaticData\15.bmp">
+      <Filter>Assets\LevelBinary\StaticData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\4.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\5.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\6.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\7.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\8.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\9.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\10.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\11.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\12.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\13.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\14.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\15.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\1.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\2.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\3.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\4.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\5.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\6.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\7.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\8.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\9.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\10.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\11.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\12.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\13.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\14.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\TerrainMaps\15.bmp">
+      <Filter>Assets\TerrainMaps</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\space.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\space.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Ground\sand.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\sunset.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\sunset.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\sunset2.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\sunset2.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\creepy.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\creepy.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\coolclouds.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\coolclouds.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Ground\leaves.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Textures\tree_001_white.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Ground\moon.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Ground\moon2..dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\wierd.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\wierd.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\cartoon.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\cartoon.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\12.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\13.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\14.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\desert2.dds">
+      <Filter>Assets\Skyboxes</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\12.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\13.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\14.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\Skyboxes\Low\desert2.dds">
+      <Filter>Assets\Skyboxes\Low</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\TreeData\1.bmp">
+      <Filter>Assets\LevelBinary\TreeData</Filter>
+    </Image>
+    <Image Include="Assets\Textures\rock1.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\LeavesTropical.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Fern2.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\grass_tex.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Leaf.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s1.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s2.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s3.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s4.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s5.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s6.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s7.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s8.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s9.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s10.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s11.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s12.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\LevelBinary\RayData\s13.bmp">
+      <Filter>Assets\LevelBinary\RayData</Filter>
+    </Image>
+    <Image Include="Assets\Ground\checker.dds">
+      <Filter>Assets\Ground</Filter>
+    </Image>
+    <Image Include="Assets\paint_splat.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Simple3DGame_TemporaryKey.pfx" />
+    <None Include="Assets\ADPCMdroid.xwb">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\adriana.spritefont">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\blair.spritefont">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\bonnie.spritefont">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\countdown.spritefont">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\display.spritefont">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\italic.spritefont">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\menu.spritefont">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Package.StoreAssociation.xml" />
+    <None Include="Simple3DGame_StoreKey.pfx" />
+    <None Include="Assets\Sounds\background.wma">
+      <Filter>Assets\Sounds</Filter>
+    </None>
+    <None Include="Drizzle_TemporaryKey.pfx" />
+    <None Include="Drizzle_StoreKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DirectXPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="PointPixelShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="PointVertexShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="ShinyPixelShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="ShinyVertexShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="SimplePixelShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="SimpleVertexShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="SkyPixelShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="SkyVertexShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TexturePixelShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="TextureVertexShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Sounds\Akisey Dance.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\all_rings_collected.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\bball.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\boom.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\bounce.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\collect_ring.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\crash-sound.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\fireing.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\hit.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\musicmono_adpcm.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\Pickup_Coin19.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\ping.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\POP.WAV">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\POP-old1.WAV">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\POP-old2.WAV">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\Checkpoint.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\MarbleFall.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\MarbleHit.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\MarbleRoll.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\MenuChange.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\MenuSelect.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Models\apple.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\arrow.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\asteroid.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\banana.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\barrel.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\Bike.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\board1.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\board2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\Box_sci.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\box2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\car_cube.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\car_cube2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\cherries.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\coin1.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\Coin2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\column.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\column2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\cone.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\coneshape.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\crystal.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\cube.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\cube_round.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\cube2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\cylinder.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\diamond.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\dice.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\ghost.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\globe2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\ground.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\ground_plane.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\heart.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\leaves.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\leaves2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\melon.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\model.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\model_cube.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\model2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\model3.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\model4.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\model5.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\monkeyhead.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\Mushroom.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\OilBarrel.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\orange.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\pacman.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\pear.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\pica.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\pill.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\planet.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\plank.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\ramp.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\ring.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\rock1.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\rock2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\rocket.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\rocket_pick.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\sb.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\ship.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\skittle.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\skittle2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\skull.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\skybox.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\tall_cylinder.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\thin_board.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\thin_board2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\torus.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\trunk.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\trunk2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\trunk3.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\untitled.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\upright_torus.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\wheel.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num9.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num1.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num3.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num4.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num5.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num6.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num7.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num8.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\num0.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\window2.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\level2.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\menu_click.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Models\tree1.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\stump.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\palm_top.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\palm_base.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\log.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\goat.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\duck.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\crystal2.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\cat.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\beam.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\rainlevel.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\City_Loop.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\background.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\ching.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\rocket.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\desert.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\destoroya.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\Hydrosphere.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\wierd.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\MusicTracks\Zander.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+    <Media Include="Assets\Models\tropical1.obj" />
+    <Media Include="Assets\Models\grass.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\fern.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\hemi.obj">
+      <Filter>Assets\Models</Filter>
+    </Media>
+    <Media Include="Assets\Models\isospere.obj" />
+    <Media Include="Assets\MusicTracks\BehindMe.wma">
+      <Filter>Assets\MusicTracks</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\LocalizedStrings.pl.txt">
+      <Filter>Assets</Filter>
+    </Text>
+    <Text Include="Assets\LocalizedStrings.txt">
+      <Filter>Assets</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\1.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\2.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\3.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\4.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\5.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\6.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\7.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\8.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\9.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\10.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\11.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\12.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\13.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\14.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\15.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\16.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\17.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\18.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\19.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+    <Text Include="Assets\LevelInfo\20.txt">
+      <Filter>Assets\LevelInfo</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="QuartzMS.TTF" />
+    <Font Include="stocky.ttf" />
+  </ItemGroup>
+</Project>

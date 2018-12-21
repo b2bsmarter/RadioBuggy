@@ -1,0 +1,1458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{cba7393c-0b10-473b-a058-11f5d5912af6}</ProjectGuid>
+    <Keyword>DirectXXamlApp</Keyword>
+    <RootNamespace>Simple3DGame</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17134.0</WindowsTargetPlatformMinVersion>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <ProjectName>Drizzle</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.props" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\MeshContentTask.props" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ShaderGraphContentTask.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.16299.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+    <Import Project="$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props" Condition="exists('$([Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformExtensionSDKLocation(`WindowsMobile, Version=10.0.15063.0`, $(TargetPlatformIdentifier), $(TargetPlatformVersion),  $(SDKReferenceDirectoryRoot), $(SDKExtensionDirectoryRoot), $(SDKReferenceRegistryRoot)))\DesignTime\CommonConfiguration\Neutral\WindowsMobile.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>Drizzle_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>AB839B9879D0024EDD811BD92541667092CDDCB7</PackageCertificateThumbprint>
+    <AppxBundle>Always</AppxBundle>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Link>
+      <AdditionalDependencies>xaudio2.lib; mfcore.lib; mfplat.lib; mfreadwrite.lib; mfuuid.lib;d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\arm; $(VCInstallDir)\lib\arm</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions); _CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Link>
+      <AdditionalDependencies>xaudio2.lib; mfcore.lib; mfplat.lib; mfreadwrite.lib; mfuuid.lib; d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\arm; $(VCInstallDir)\lib\arm</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions); _CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <Optimization>Full</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link>
+      <AdditionalDependencies>d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store; $(VCInstallDir)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions); _CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <AdditionalDependencies>xaudio2.lib; mfcore.lib; mfplat.lib; mfreadwrite.lib; mfuuid.lib; d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\amd32; $(VCInstallDir)\lib\amd32</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); _CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>xaudio2.lib; mfcore.lib; mfplat.lib; mfreadwrite.lib; mfuuid.lib;d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\amd64; $(VCInstallDir)\lib\amd64</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions); _CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>xaudio2.lib; mfcore.lib; mfplat.lib; mfreadwrite.lib; mfuuid.lib; d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\amd64; $(VCInstallDir)\lib\amd64</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions); _CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <Optimization>Custom</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <FxCompile>
+      <ShaderModel>4.0_level_9_3</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="Assets\AlignmentGrid.png" />
+    <Image Include="Assets\ApplicationIcon.png" />
+    <Image Include="Assets\arow.png" />
+    <Image Include="Assets\arow_long.png" />
+    <Image Include="Assets\FullGame.png" />
+    <Image Include="Assets\Ground\bluestone.dds" />
+    <Image Include="Assets\Ground\browndirt.dds" />
+    <Image Include="Assets\Ground\brownrocks.dds" />
+    <Image Include="Assets\Ground\checker.dds" />
+    <Image Include="Assets\Ground\green.dds" />
+    <Image Include="Assets\Ground\leaves.dds" />
+    <Image Include="Assets\Ground\moon.dds" />
+    <Image Include="Assets\Ground\moon2..dds" />
+    <Image Include="Assets\Ground\redsquares.dds" />
+    <Image Include="Assets\Ground\sand.dds" />
+    <Image Include="Assets\Ground\snow.dds" />
+    <Image Include="Assets\Ground\water.dds" />
+    <Image Include="Assets\LevelBinary\BoxData\1.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\10.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\11.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\12.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\13.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\14.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\15.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\2.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\3.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\4.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\5.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\6.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\7.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\8.bmp" />
+    <Image Include="Assets\LevelBinary\BoxData\9.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\1.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\10.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\11.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\12.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\13.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\14.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\15.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\2.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\3.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\4.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\5.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\6.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\7.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\8.bmp" />
+    <Image Include="Assets\LevelBinary\FruitData\9.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\1.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\10.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\11.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\12.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\13.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\14.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\15.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\2.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\3.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\4.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\5.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\6.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\7.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\8.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\9.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s1.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s10.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s11.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s12.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s13.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s2.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s3.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s4.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s5.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s6.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s7.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s8.bmp" />
+    <Image Include="Assets\LevelBinary\RayData\s9.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\1.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\10.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\11.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\12.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\13.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\14.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\15.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\2.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\3.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\4.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\5.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\6.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\7.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\8.bmp" />
+    <Image Include="Assets\LevelBinary\StaticData\9.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\1.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\10.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\11.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\12.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\13.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\14.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\15.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\2.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\3.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\4.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\5.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\6.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\7.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\8.bmp" />
+    <Image Include="Assets\LevelBinary\TreeData\9.bmp" />
+    <Image Include="Assets\Levelthumbs\1.png" />
+    <Image Include="Assets\Levelthumbs\10.png" />
+    <Image Include="Assets\Levelthumbs\11.png" />
+    <Image Include="Assets\Levelthumbs\12.png" />
+    <Image Include="Assets\Levelthumbs\13.png" />
+    <Image Include="Assets\Levelthumbs\14.png" />
+    <Image Include="Assets\Levelthumbs\15.png" />
+    <Image Include="Assets\Levelthumbs\16.png" />
+    <Image Include="Assets\Levelthumbs\17.png" />
+    <Image Include="Assets\Levelthumbs\18.png" />
+    <Image Include="Assets\Levelthumbs\19.png" />
+    <Image Include="Assets\Levelthumbs\2.png" />
+    <Image Include="Assets\Levelthumbs\20.png" />
+    <Image Include="Assets\Levelthumbs\3.png" />
+    <Image Include="Assets\Levelthumbs\4.png" />
+    <Image Include="Assets\Levelthumbs\5.png" />
+    <Image Include="Assets\Levelthumbs\6.png" />
+    <Image Include="Assets\Levelthumbs\7.png" />
+    <Image Include="Assets\Levelthumbs\8.png" />
+    <Image Include="Assets\Levelthumbs\9.png" />
+    <Image Include="Assets\Lock.png" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png" />
+    <Image Include="Assets\menu_lines.png" />
+    <Image Include="Assets\NewSquare.png" />
+    <Image Include="Assets\paint_splat.png" />
+    <Image Include="Assets\screenshot1.png" />
+    <Image Include="Assets\Skyboxes\12.dds" />
+    <Image Include="Assets\Skyboxes\13.dds" />
+    <Image Include="Assets\Skyboxes\14.dds" />
+    <Image Include="Assets\Skyboxes\blueocean.dds" />
+    <Image Include="Assets\Skyboxes\cartoon.dds" />
+    <Image Include="Assets\Skyboxes\coolclouds.dds" />
+    <Image Include="Assets\Skyboxes\creepy.dds" />
+    <Image Include="Assets\Skyboxes\desert.dds" />
+    <Image Include="Assets\Skyboxes\desert2.dds" />
+    <Image Include="Assets\Skyboxes\Low\12.dds" />
+    <Image Include="Assets\Skyboxes\Low\13.dds" />
+    <Image Include="Assets\Skyboxes\Low\14.dds" />
+    <Image Include="Assets\Skyboxes\Low\blueocean.dds" />
+    <Image Include="Assets\Skyboxes\Low\cartoon.dds" />
+    <Image Include="Assets\Skyboxes\Low\coolclouds.dds" />
+    <Image Include="Assets\Skyboxes\Low\creepy.dds" />
+    <Image Include="Assets\Skyboxes\Low\desert.dds" />
+    <Image Include="Assets\Skyboxes\Low\desert2.dds" />
+    <Image Include="Assets\Skyboxes\Low\moon.dds" />
+    <Image Include="Assets\Skyboxes\Low\space.dds" />
+    <Image Include="Assets\Skyboxes\Low\sunny.dds" />
+    <Image Include="Assets\Skyboxes\Low\sunset.dds" />
+    <Image Include="Assets\Skyboxes\Low\sunset2.dds" />
+    <Image Include="Assets\Skyboxes\Low\wierd.dds" />
+    <Image Include="Assets\Skyboxes\Low\winter.dds" />
+    <Image Include="Assets\Skyboxes\moon.dds" />
+    <Image Include="Assets\Skyboxes\space.dds" />
+    <Image Include="Assets\Skyboxes\sunny.dds" />
+    <Image Include="Assets\Skyboxes\sunset.dds" />
+    <Image Include="Assets\Skyboxes\sunset2.dds" />
+    <Image Include="Assets\Skyboxes\wierd.dds" />
+    <Image Include="Assets\Skyboxes\winter.dds" />
+    <Image Include="Assets\SplashScreen.scale-200.png" />
+    <Image Include="Assets\Square150x150Logo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-125.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-150.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-400.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Image Include="Assets\StoreLogo.png" />
+    <Image Include="Assets\TerrainMaps\1.bmp" />
+    <Image Include="Assets\TerrainMaps\10.bmp" />
+    <Image Include="Assets\TerrainMaps\11.bmp" />
+    <Image Include="Assets\TerrainMaps\12.bmp" />
+    <Image Include="Assets\TerrainMaps\13.bmp" />
+    <Image Include="Assets\TerrainMaps\14.bmp" />
+    <Image Include="Assets\TerrainMaps\15.bmp" />
+    <Image Include="Assets\TerrainMaps\2.bmp" />
+    <Image Include="Assets\TerrainMaps\3.bmp" />
+    <Image Include="Assets\TerrainMaps\4.bmp" />
+    <Image Include="Assets\TerrainMaps\5.bmp" />
+    <Image Include="Assets\TerrainMaps\6.bmp" />
+    <Image Include="Assets\TerrainMaps\7.bmp" />
+    <Image Include="Assets\TerrainMaps\8.bmp" />
+    <Image Include="Assets\TerrainMaps\9.bmp" />
+    <Image Include="Assets\Textures\back_tex.dds" />
+    <Image Include="Assets\Textures\banana.dds" />
+    <Image Include="Assets\Textures\barrel.dds" />
+    <Image Include="Assets\Textures\barrelColor.dds" />
+    <Image Include="Assets\Textures\beachball.dds" />
+    <Image Include="Assets\Textures\beam.dds" />
+    <Image Include="Assets\Textures\blob.dds" />
+    <Image Include="Assets\Textures\Box_sci.dds" />
+    <Image Include="Assets\Textures\carshade3.dds" />
+    <Image Include="Assets\Textures\cartex.dds" />
+    <Image Include="Assets\Textures\cat.dds" />
+    <Image Include="Assets\Textures\cherries.dds" />
+    <Image Include="Assets\Textures\coin-texture.dds" />
+    <Image Include="Assets\Textures\cokecan.dds" />
+    <Image Include="Assets\Textures\cone.dds" />
+    <Image Include="Assets\Textures\crate.dds" />
+    <Image Include="Assets\Textures\crystal2.dds" />
+    <Image Include="Assets\Textures\dice.dds" />
+    <Image Include="Assets\Textures\display.dds" />
+    <Image Include="Assets\Textures\DUCK.dds" />
+    <Image Include="Assets\Textures\earth_sphere.dds" />
+    <Image Include="Assets\Textures\enigma1.dds" />
+    <Image Include="Assets\Textures\explosion.dds" />
+    <Image Include="Assets\Textures\Fern2.dds" />
+    <Image Include="Assets\Textures\fin-flag-ok-not.dds" />
+    <Image Include="Assets\Textures\fin-flag-ok.dds" />
+    <Image Include="Assets\Textures\fin-flag.dds" />
+    <Image Include="Assets\Textures\flame_0.dds" />
+    <Image Include="Assets\Textures\foot_ball.dds" />
+    <Image Include="Assets\Textures\ghost_tex1.dds" />
+    <Image Include="Assets\Textures\ghost_tex2.dds" />
+    <Image Include="Assets\Textures\goat.dds" />
+    <Image Include="Assets\Textures\gold.dds" />
+    <Image Include="Assets\Textures\Granite_Dark.dds" />
+    <Image Include="Assets\Textures\grass.dds" />
+    <Image Include="Assets\Textures\grass_tex.dds" />
+    <Image Include="Assets\Textures\Grey.dds" />
+    <Image Include="Assets\Textures\ice.dds" />
+    <Image Include="Assets\Textures\Leaf.dds" />
+    <Image Include="Assets\Textures\leaves.dds" />
+    <Image Include="Assets\Textures\LeavesTropical.dds" />
+    <Image Include="Assets\Textures\Lock.dds" />
+    <Image Include="Assets\Textures\log.dds" />
+    <Image Include="Assets\Textures\Marble.dds" />
+    <Image Include="Assets\Textures\melon.dds" />
+    <Image Include="Assets\Textures\menu-background.dds" />
+    <Image Include="Assets\Textures\menu-item.dds" />
+    <Image Include="Assets\Textures\mushroomblue.dds" />
+    <Image Include="Assets\Textures\mushroomgreen.dds" />
+    <Image Include="Assets\Textures\mushroompurple.dds" />
+    <Image Include="Assets\Textures\mushroomred.dds" />
+    <Image Include="Assets\Textures\old_grate.dds" />
+    <Image Include="Assets\Textures\orange.dds" />
+    <Image Include="Assets\Textures\palm_base.dds" />
+    <Image Include="Assets\Textures\palm_top.dds" />
+    <Image Include="Assets\Textures\Pear.dds" />
+    <Image Include="Assets\Textures\pica.dds" />
+    <Image Include="Assets\Textures\pill.dds" />
+    <Image Include="Assets\Textures\points.dds" />
+    <Image Include="Assets\Textures\poke.dds" />
+    <Image Include="Assets\Textures\Preta.dds" />
+    <Image Include="Assets\Textures\rain_drop.dds" />
+    <Image Include="Assets\Textures\red_apple.dds" />
+    <Image Include="Assets\Textures\rock1.dds" />
+    <Image Include="Assets\Textures\rock_tex.dds" />
+    <Image Include="Assets\Textures\sand.dds" />
+    <Image Include="Assets\Textures\seafloor.dds" />
+    <Image Include="Assets\Textures\sf1.dds" />
+    <Image Include="Assets\Textures\sf2.dds" />
+    <Image Include="Assets\Textures\sf3.dds" />
+    <Image Include="Assets\Textures\sf4.dds" />
+    <Image Include="Assets\Textures\sf5l.dds" />
+    <Image Include="Assets\Textures\sf6.dds" />
+    <Image Include="Assets\Textures\sf7.dds" />
+    <Image Include="Assets\Textures\sf8.dds" />
+    <Image Include="Assets\Textures\sfall.dds" />
+    <Image Include="Assets\Textures\sfall1.dds" />
+    <Image Include="Assets\Textures\skull.dds" />
+    <Image Include="Assets\Textures\Skybox.dds" />
+    <Image Include="Assets\Textures\snow.dds" />
+    <Image Include="Assets\Textures\spark.dds" />
+    <Image Include="Assets\Textures\sphere.dds" />
+    <Image Include="Assets\Textures\spot.dds" />
+    <Image Include="Assets\Textures\stage1.dds" />
+    <Image Include="Assets\Textures\stage2.dds" />
+    <Image Include="Assets\Textures\stained1.dds" />
+    <Image Include="Assets\Textures\Star_coin.dds" />
+    <Image Include="Assets\Textures\stone1.dds" />
+    <Image Include="Assets\Textures\stripes.dds" />
+    <Image Include="Assets\Textures\stump.dds" />
+    <Image Include="Assets\Textures\ten_points.dds" />
+    <Image Include="Assets\Textures\Tiny_skin.dds" />
+    <Image Include="Assets\Textures\trans_marble.dds" />
+    <Image Include="Assets\Textures\tree_001.dds" />
+    <Image Include="Assets\Textures\tree_001_white.dds" />
+    <Image Include="Assets\Textures\tree_bark.dds" />
+    <Image Include="Assets\Textures\trunk.dds" />
+    <Image Include="Assets\Textures\verticalstripes.dds" />
+    <Image Include="Assets\Textures\wheel_tex1.dds" />
+    <Image Include="Assets\Textures\wheel_tex2.dds" />
+    <Image Include="Assets\Textures\windowslogo.dds" />
+    <Image Include="Assets\Textures\wooden-fence-hi.dds" />
+    <Image Include="Assets\Textures\woodfin.dds" />
+    <Image Include="Assets\Textures\woodfloor.dds" />
+    <Image Include="Assets\Textures\yell.dds" />
+    <Image Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.xaml.h">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Audio.h" />
+    <ClInclude Include="BasicLoader.h" />
+    <ClInclude Include="BasicMath.h" />
+    <ClInclude Include="BasicReaderWriter.h" />
+    <ClInclude Include="BasicShapes.h" />
+    <ClInclude Include="Boxes.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Cash.h" />
+    <ClInclude Include="Common\DeviceResources.h" />
+    <ClInclude Include="DDSTextureLoader.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="DirectXSample.h" />
+    <ClInclude Include="Dots.h" />
+    <ClInclude Include="Explode.h" />
+    <ClInclude Include="Fence.h" />
+    <ClInclude Include="Fire.h" />
+    <ClInclude Include="Flag.h" />
+    <ClInclude Include="FlagNode.h" />
+    <ClInclude Include="Fruit.h" />
+    <ClInclude Include="GameUIControl.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Lights.h" />
+    <ClInclude Include="MediaReader.h" />
+    <ClInclude Include="MediaStreamer.h" />
+    <ClInclude Include="ModelLoader.h" />
+    <ClInclude Include="Modicle.h" />
+    <ClInclude Include="MoveLookController.h" />
+    <ClInclude Include="PerlinNoise.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Points.h" />
+    <ClInclude Include="Rain.h" />
+    <ClInclude Include="ShaderStructures.h" />
+    <ClInclude Include="Shoot.h" />
+    <ClInclude Include="Simple3DGameMain.h" />
+    <ClInclude Include="DirectXPage.xaml.h">
+      <DependentUpon>DirectXPage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Common\StepTimer.h" />
+    <ClInclude Include="Content\Sample3DSceneRenderer.h" />
+    <ClInclude Include="Content\SampleFpsTextRenderer.h" />
+    <ClInclude Include="Content\ShaderStructures.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Sky.h" />
+    <ClInclude Include="Snow.h" />
+    <ClInclude Include="SoundEffect.h" />
+    <ClInclude Include="Sparticle.h" />
+    <ClInclude Include="Splash.h" />
+    <ClInclude Include="Stage.h" />
+    <ClInclude Include="Statics.h" />
+    <ClInclude Include="StereoProjection.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="Textures.h" />
+    <ClInclude Include="TouchClass.h" />
+    <ClInclude Include="Trees.h" />
+    <ClInclude Include="ViewModel.h" />
+    <ClInclude Include="WorldObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="BasicLoader.cpp" />
+    <ClCompile Include="BasicReaderWriter.cpp" />
+    <ClCompile Include="Boxes.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Cash.cpp" />
+    <ClCompile Include="Common\DeviceResources.cpp" />
+    <ClCompile Include="DDSTextureLoader.cpp" />
+    <ClCompile Include="Dots.cpp" />
+    <ClCompile Include="Explode.cpp" />
+    <ClCompile Include="Fence.cpp" />
+    <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="Flag.cpp" />
+    <ClCompile Include="FlagNode.cpp" />
+    <ClCompile Include="Fruit.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Lights.cpp" />
+    <ClCompile Include="MediaReader.cpp" />
+    <ClCompile Include="MediaStreamer.cpp" />
+    <ClCompile Include="ModelLoader.cpp" />
+    <ClCompile Include="Modicle.cpp" />
+    <ClCompile Include="MoveLookController.cpp" />
+    <ClCompile Include="PerlinNoise.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Points.cpp" />
+    <ClCompile Include="Rain.cpp" />
+    <ClCompile Include="Shoot.cpp" />
+    <ClCompile Include="Simple3DGameMain.cpp" />
+    <ClCompile Include="DirectXPage.xaml.cpp">
+      <DependentUpon>DirectXPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Content\SampleFpsTextRenderer.cpp" />
+    <ClCompile Include="Content\Sample3DSceneRenderer.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sky.cpp" />
+    <ClCompile Include="Snow.cpp" />
+    <ClCompile Include="SoundEffect.cpp" />
+    <ClCompile Include="Sparticle.cpp" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Statics.cpp" />
+    <ClCompile Include="StereoProjection.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="Textures.cpp" />
+    <ClCompile Include="TouchClass.cpp" />
+    <ClCompile Include="Trees.cpp" />
+    <ClCompile Include="ViewModel.cpp" />
+    <ClCompile Include="WorldObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Media Include="Assets\Sounds\rocket.wav" />
+    <None Include="Assets\ADPCMdroid.xwb" />
+    <None Include="Assets\adriana.spritefont" />
+    <Media Include="Assets\background.wma">
+      <DeploymentContent>true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+    <None Include="Assets\blair.spritefont" />
+    <None Include="Assets\bonnie.spritefont" />
+    <None Include="Assets\countdown.spritefont" />
+    <None Include="Assets\display.spritefont" />
+    <None Include="Assets\italic.spritefont" />
+    <None Include="Assets\menu.spritefont" />
+    <Media Include="Assets\MusicTracks\level2.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\MusicTracks\window2.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\MusicTracks\rainlevel.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\MusicTracks\City_Loop.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\MusicTracks\destoroya.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+    <Media Include="Assets\MusicTracks\desert.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+    <Media Include="Assets\MusicTracks\wierd.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+    <Media Include="Assets\MusicTracks\Hydrosphere.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+    <Media Include="Assets\MusicTracks\Zander.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+    <Media Include="Assets\MusicTracks\BehindMe.wma">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+    <None Include="Assets\Sounds\background.wma" />
+    <Media Include="Assets\Sounds\Akisey Dance.wav" />
+    <Media Include="Assets\Sounds\all_rings_collected.wav" />
+    <Media Include="Assets\Sounds\bball.wav" />
+    <Media Include="Assets\Sounds\boom.wav" />
+    <Media Include="Assets\Sounds\bounce.wav" />
+    <Media Include="Assets\Sounds\Checkpoint.wav" />
+    <Media Include="Assets\Sounds\ching.wav" />
+    <Media Include="Assets\Sounds\collect_ring.wav" />
+    <Media Include="Assets\Sounds\crash-sound.wav" />
+    <Media Include="Assets\Sounds\fireing.wav" />
+    <Media Include="Assets\Sounds\hit.wav" />
+    <Media Include="Assets\Sounds\MarbleFall.wav" />
+    <Media Include="Assets\Sounds\MarbleHit.wav" />
+    <Media Include="Assets\Sounds\MarbleRoll.wav" />
+    <Media Include="Assets\Sounds\MenuChange.wav" />
+    <Media Include="Assets\Sounds\MenuSelect.wav" />
+    <Media Include="Assets\Sounds\menu_click.wav" />
+    <Media Include="Assets\Sounds\musicmono_adpcm.wav" />
+    <Media Include="Assets\Sounds\Pickup_Coin19.wav" />
+    <Media Include="Assets\Sounds\ping.wav" />
+    <Media Include="Assets\Sounds\POP-old1.WAV" />
+    <Media Include="Assets\Sounds\POP-old2.WAV" />
+    <Media Include="Assets\Sounds\POP.WAV" />
+    <None Include="Drizzle_StoreKey.pfx" />
+    <None Include="Drizzle_TemporaryKey.pfx" />
+    <None Include="Simple3DGame_StoreKey.pfx" />
+    <None Include="Simple3DGame_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Content\SamplePixelShader.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Content\SampleVertexShader.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="PointPixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="PointVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="ShinyPixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EnableDebuggingInformation>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DisableOptimizations>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="ShinyVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableOptimizations>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="SimplePixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="SimpleVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="SkyPixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="SkyVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="TexturePixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="TextureVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4.0_level_9_3</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="DirectXPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\LevelInfo\1.txt" />
+    <Text Include="Assets\LevelInfo\10.txt" />
+    <Text Include="Assets\LevelInfo\11.txt" />
+    <Text Include="Assets\LevelInfo\12.txt" />
+    <Text Include="Assets\LevelInfo\13.txt" />
+    <Text Include="Assets\LevelInfo\14.txt" />
+    <Text Include="Assets\LevelInfo\15.txt" />
+    <Text Include="Assets\LevelInfo\16.txt" />
+    <Text Include="Assets\LevelInfo\17.txt" />
+    <Text Include="Assets\LevelInfo\18.txt" />
+    <Text Include="Assets\LevelInfo\19.txt" />
+    <Text Include="Assets\LevelInfo\2.txt" />
+    <Text Include="Assets\LevelInfo\20.txt" />
+    <Text Include="Assets\LevelInfo\3.txt" />
+    <Text Include="Assets\LevelInfo\4.txt" />
+    <Text Include="Assets\LevelInfo\5.txt" />
+    <Text Include="Assets\LevelInfo\6.txt" />
+    <Text Include="Assets\LevelInfo\7.txt" />
+    <Text Include="Assets\LevelInfo\8.txt" />
+    <Text Include="Assets\LevelInfo\9.txt" />
+    <Text Include="Assets\LocalizedStrings.pl.txt" />
+    <Text Include="Assets\LocalizedStrings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="QuartzMS.TTF" />
+    <Font Include="stocky.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\apple.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\arrow.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\asteroid.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\banana.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\barrel.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\Bike.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\board1.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\board2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\box2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\Box_sci.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\car_cube.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\car_cube2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\cherries.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\coin1.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\Coin2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\column.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\column2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\cone.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\coneshape.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\crystal.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\cube.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\cube2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\cube_round.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\cylinder.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\diamond.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\dice.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <SubType>Designer</SubType>
+    </Media>
+    <Media Include="Assets\Models\ghost.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\globe2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\ground.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\ground_plane.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\heart.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\leaves.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\leaves2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\melon.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\model.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\model2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\model3.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\model4.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\model5.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\model_cube.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\monkeyhead.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\Mushroom.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\OilBarrel.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\orange.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\pacman.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\pear.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\pica.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\pill.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\planet.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\plank.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\ramp.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\ring.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\rock1.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\rock2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\rocket.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\rocket_pick.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\sb.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\ship.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\skittle.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\skittle2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\skull.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\skybox.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\tall_cylinder.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\thin_board.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\thin_board2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\torus.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\trunk.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\trunk2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\trunk3.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\untitled.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\upright_torus.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\wheel.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\num1.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\num2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\num0.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\num3.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\num4.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\num5.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\num6.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\num7.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\num8.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+    <Media Include="Assets\Models\num9.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\beam.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\tree1.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\cat.obj">
+      <SubType>Designer</SubType>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\duck.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\log.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\crystal2.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\stump.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\palm_base.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+    <Media Include="Assets\Models\palm_top.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\goat.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\tropical1.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\fern.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\grass.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\hemi.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Models\isospere.obj">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bullet\build\BulletCollision_\BulletCollision_.vcxproj">
+      <Project>{234e33a7-c3f3-41c9-8b52-667a146cef0e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Bullet\build\vs2010\BulletDynamics_\BulletDynamics_.vcxproj">
+      <Project>{d11c4d6d-2ea0-44e9-87bb-c643cba92736}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Bullet\build\vs2010\LinearMath_\LinearMath_.vcxproj">
+      <Project>{b0824f10-c5f2-4946-9019-acf1bc29637e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DirectXTK\DirectXTK_Windows10.vcxproj">
+      <Project>{f4776924-619c-42c7-88b2-82c947ccc9e7}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.targets" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\MeshContentTask.targets" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ShaderGraphContentTask.targets" />
+  </ImportGroup>
+</Project>

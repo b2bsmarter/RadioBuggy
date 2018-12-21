@@ -1,0 +1,13 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl Mat.Craneo
+Ns 66.666667
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.717760 0.586667
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\media\KINGSTON\3D\ZombieGordo\ambocc_craneo.png
+map_Bump C:\\Users\\craig\\Desktop\\ddds\\craneo_normales.png

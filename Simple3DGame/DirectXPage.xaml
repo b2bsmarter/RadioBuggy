@@ -1,0 +1,372 @@
+﻿<Page
+    x:Class="Simple3DGame.DirectXPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <SwapChainPanel x:Name="swapChainPanel" >
+
+
+        
+
+
+
+        <Grid Name="start_box_grid">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="high_score" Text="High Score" Visibility="Collapsed" TextWrapping="Wrap" TextAlignment="Center"  Height="Auto"  Width="286" FontSize="40" Foreground="Green" FontFamily="QuartzMS.ttf#Quartz MS" RenderTransformOrigin="0.5,0.5" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform ScaleX="1.0" ScaleY="1.0"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock x:Name="start_box" Text="5"  TextWrapping="Wrap" TextAlignment="Center"   Height="130"  Width="286" FontSize="70" Foreground="Red" FontFamily="QuartzMS.ttf#Quartz MS" Opacity="0.5" RenderTransformOrigin="0.5,0.5" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform ScaleX="1.0" ScaleY="1.0"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+
+        <Grid Name="right_chooser" HorizontalAlignment="Right" Height="730" VerticalAlignment="bottom" Width="153" Visibility="Collapsed">
+            <StackPanel>
+                <CheckBox Content="Show itempo" Name="itempo_check" Checked="itempo_check_Checked" Unchecked="itempo_check_Unchecked" Foreground="Wheat" />
+                <CheckBox Content="Continual" Name="cont_check" Checked="cont_check_Checked" Unchecked="cont_check_Unchecked" Foreground="Wheat" />
+                <CheckBox Content="Grid height" Name="grid_check" Checked="grid_check_Checked" Unchecked="grid_check_Unchecked" Foreground="Wheat" />
+                <CheckBox Content="Free Cam" Name="cam_check" Checked="cam_check_Checked" Unchecked="cam_check_Unchecked" Foreground="Wheat" />
+                <CheckBox Content="Ray" Name="ray_check" Checked="ray_check_Checked" Unchecked="ray_check_Unchecked" Foreground="Wheat"/>
+                <CheckBox Content="Rotate" Name="rotate_check" Checked="rotate_check_Checked" Unchecked="rotate_check_Unchecked" Foreground="Wheat"/>
+                <CheckBox Content="Fix height" Name="fix_height" Checked="fix_height_Checked" Unchecked="fix_height_Unchecked" Foreground="Wheat"/>
+                <CheckBox Content="Player position" Name="player_pos" Checked="player_pos_Checked" Unchecked="player_pos_Unchecked" Foreground="Wheat"/>
+                <ScrollViewer>
+                    <ListView x:Name="items_list" HorizontalAlignment="Center" Height="440" Width="Auto" HorizontalContentAlignment="Center"
+                    SelectionMode="Single" Visibility="Visible" SelectionChanged="items_list_SelectionChanged" PointerPressed="items_list_PointerPressed" >
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel Orientation="Vertical"></VirtualizingStackPanel>
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Height" Value="2" />
+                                
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+
+                                <Grid Height="20" Background="CadetBlue" Width="350" Name="TitleRect">
+                                    <TextBlock TextAlignment="Left" HorizontalAlignment="Left" Text="{Binding Name}" Width="180" FontSize="15" />
+                                </Grid>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollViewer>
+            </StackPanel>
+        </Grid>
+
+        <Grid Name="game_hud" Visibility="Visible">
+            <Grid HorizontalAlignment="center" Height="70" VerticalAlignment="Top" Width="178"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="19*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="button_level_back" Visibility="Collapsed" HorizontalAlignment="left" Height="25" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="25" Source="Assets/arow.png" Opacity="0.2" PointerEntered="button_level_back_PointerPressed" Margin="0,-2,0,15"  >
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="180"/>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="button_for_back" Visibility="Collapsed" HorizontalAlignment="right" Height="25" VerticalAlignment="Center" Width="25" Source="Assets/arow.png" Opacity="0.2" PointerEntered="button_level_for_PointerPressed" Margin="0,-2,0,15" />
+                <StackPanel  Orientation="Vertical" Margin="0,0,0,0" HorizontalAlignment="Right" Width="178" Grid.RowSpan="2" >
+                    
+                    <TextBlock x:Name="time_text" Text="Time"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="25" FontFamily="QuartzMS.ttf#Quartz MS" Foreground="Blue" Width="113"/>
+
+                </StackPanel>
+            </Grid>
+            <TextBlock x:Name="TimeText" HorizontalAlignment="Right" Margin="303,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="87" FontSize="30" Foreground="Blue" FontFamily="QuartzMS.ttf#Quartz MS"/>
+
+            <Grid HorizontalAlignment="right" Height="160" VerticalAlignment="Top" Width="103" >
+                <TextBlock x:Name="points_box" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" TextAlignment="Right" VerticalAlignment="Top" Height="36" Width="95" FontSize="30" Foreground="Blue" FontFamily="QuartzMS.ttf#Quartz MS"/>
+                <TextBlock x:Name="rockets_box" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" TextAlignment="Right"  VerticalAlignment="Top" Height="36" Width="95" FontSize="30" Foreground="Orange" FontFamily="QuartzMS.ttf#Quartz MS" Margin="0,30,0,0"/>
+                <TextBlock x:Name="rings_box" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" TextAlignment="Right"  VerticalAlignment="Top" Height="36" Width="95" FontSize="30" Foreground="Red" FontFamily="QuartzMS.ttf#Quartz MS" Margin="0,60,0,0"/>
+
+                <Image x:Name="button_respot" HorizontalAlignment="Right" Height="90" VerticalAlignment="Bottom" Width="60" Source="Assets/arow.png" Opacity="0.2" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" PointerEntered="button_respot_PointerEntered" >
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="90"/>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+
+
+
+            <Grid Name="right_buttons" HorizontalAlignment="Right" Height="160" VerticalAlignment="bottom" Width="153">
+                <Image x:Name="button_right" HorizontalAlignment="Right" Height="70" VerticalAlignment="Bottom" Width="70" Source="Assets/arow.png" Opacity="0.2" PointerEntered="button_right_PointerPressed" PointerExited="button_right_PointerReleased"/>
+                <Image x:Name="button_left" HorizontalAlignment="Left" Height="70" VerticalAlignment="Bottom" Width="70" Source="Assets/arow.png" Opacity="0.2" RenderTransformOrigin="0.5,0.5" PointerEntered="button_left_PointerPressed" PointerExited="button_left_PointerReleased" >
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="180"/>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="button_grab" HorizontalAlignment="Right" Height="70" VerticalAlignment="Top" Width="70" Source="Assets/arow.png" Opacity="0.2" PointerEntered="button_grab_PointerPressed" PointerExited="button_grab_PointerReleased" />
+            </Grid>
+            <Grid HorizontalAlignment="left" Height="320" VerticalAlignment="bottom" Width="70" Name="left_buttons">
+                <Image x:Name="button_ab" Visibility="Collapsed"  HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="70" Source="Assets/arow.png" Opacity="0.2" RenderTransformOrigin="0.5,0.5" PointerEntered="button_ab_PointerPressed" PointerExited="button_ab_PointerReleased">
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="270"/>
+                    </Image.RenderTransform>
+                </Image>
+
+                <Image x:Name="button_up" HorizontalAlignment="Left" Height="180" VerticalAlignment="Center" Width="70" Source="Assets/arow_long.png" Opacity="0.2" RenderTransformOrigin="0.5,0.5" PointerEntered="button_up_PointerPressed" PointerExited="button_up_PointerReleased" PointerMoved="button_up_PointerMoved">
+                
+                </Image>
+                <Image x:Name="button_down" HorizontalAlignment="Left" Height="70"  VerticalAlignment="bottom" Width="70" Source="Assets/arow.png" Opacity="0.2" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" PointerEntered="button_down_PointerPressed" PointerExited="button_down_PointerReleased" >
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="90"/>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+
+            <Grid HorizontalAlignment="left" Height="40" VerticalAlignment="top" Width="80" >
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="button_menu" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top" Width="40" Source="Assets/menu_lines.png" Opacity="0.2" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" PointerEntered="button_menu_PointerEntered" >
+
+                </Image>
+                    <TextBlock x:Name="title" Text=""
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="25" Foreground="Blue"  Width="113"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid  Name="optionsbox" HorizontalAlignment="Center" Width="198" Height="296" VerticalAlignment="Center" Visibility="Collapsed">
+                <Rectangle Fill="#FF179BD8"  Stroke="Black"  Width="Auto" Height="Auto" Opacity="0.2" />
+                <TextBlock x:Name="textBlock" FontSize="27"  HorizontalAlignment="Left" Height="34" Margin="35,13,0,0" TextWrapping="Wrap" Text="Continue" VerticalAlignment="Top" Width="121"/>
+            </Grid>
+        </Grid>
+
+
+
+        <Grid Name="settings_area" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.5" ></Grid>
+            <Grid VerticalAlignment="Center">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Options" HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" ></TextBlock>
+                    <Grid Height="50"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <TextBlock Text="Detail" Width="230" TextAlignment="Center"  HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" ></TextBlock>
+                        <TextBlock Name="shader_type" Text="yes"  Width="150"  TextAlignment="Center" HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" Tapped="shader_tapped" ></TextBlock>
+
+                    </StackPanel>
+                    <Grid Height="10"></Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <TextBlock Text="Music" Width="230" TextAlignment="Center"  HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" ></TextBlock>
+                        <TextBlock Name="music_on" Text="yes"  Width="150"  TextAlignment="Center" HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" Tapped="music_tapped" ></TextBlock>
+
+                    </StackPanel>
+                    <Grid Height="10"></Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <TextBlock Text="Controls" Width="230" TextAlignment="Center"  HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" ></TextBlock>
+                        <TextBlock Name="controls_on" Text="Show"  Width="150"  TextAlignment="Center" HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" Tapped="controls_tapped" ></TextBlock>
+
+                    </StackPanel>
+                    <Grid Height="50"></Grid>
+                    <TextBlock Text="OK" HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" Tapped="ok_tapped" ></TextBlock>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+
+
+        
+        <Grid Name="quit_quest" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.5" ></Grid>
+            <Grid VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Exit Game" HorizontalAlignment="Center" FontSize="45"  FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" ></TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <TextBlock Text="Yes" Width="100" TextAlignment="Center"  HorizontalAlignment="Center" FontSize="45"  FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" Tapped="exit_yes_tapped"  ></TextBlock>
+                        <TextBlock Text="No"  Width="100"  TextAlignment="Center" HorizontalAlignment="Center" FontSize="45"   FontFamily="stocky.ttf#Stocky" Foreground="YellowGreen" Tapped="exit_no_tapped" ></TextBlock>
+                
+            </StackPanel>
+            </StackPanel>
+            </Grid>
+
+        </Grid>
+
+
+
+        
+
+        <Grid Name="pause_area" Visibility="Collapsed" >
+            <Grid   Background="Black" Opacity="0.5" ></Grid>
+            <ScrollViewer Margin="0,80,0,0">
+                <StackPanel Orientation="Vertical" >
+                    <Grid Height="40">
+                        <TextBlock Text="player" Name="pause_player_name" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"   Foreground="White" />
+                    </Grid>
+                    <TextBlock FontFamily="stocky.ttf#Stocky" Text="Continue" HorizontalAlignment="Center" FontSize="45"  Foreground="YellowGreen" Tapped="Continue_Tapped" >
+                        <TextBlock.RenderTransform>
+                            <CompositeTransform Rotation="-3"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                    <Grid Height="5"></Grid>
+                    <TextBlock FontFamily="stocky.ttf#Stocky" Text="Options" HorizontalAlignment="Center" FontSize="45"   Foreground="YellowGreen" Tapped="Options_Tapped" >
+                        <TextBlock.RenderTransform>
+                            <CompositeTransform Rotation="2"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                    <Grid Height="5"></Grid>
+                    <Grid>
+                    <TextBlock FontFamily="stocky.ttf#Stocky" Name="full_game_button" Text="Full Game" Visibility="Collapsed" HorizontalAlignment="Center" FontSize="45" Foreground="YellowGreen" Tapped="Full_Tapped" ></TextBlock>
+                        
+                    </Grid>
+                    <Grid Height="5"></Grid>
+                    <TextBlock FontFamily="stocky.ttf#Stocky" Text="Exit" HorizontalAlignment="Center" FontSize="45" Foreground="YellowGreen" Tapped="Exit_Tapped">
+                        <TextBlock.RenderTransform>
+                            <CompositeTransform Rotation="3"/>
+                        </TextBlock.RenderTransform>
+
+                    </TextBlock>
+                <Grid Height="50"></Grid>
+                <TextBlock Text="Level Select:" HorizontalAlignment="Center" FontSize="25" Foreground="White"></TextBlock>
+                <ListView x:Name="MyList" Height="300" Width="Auto" HorizontalContentAlignment="Center"
+                            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                            ScrollViewer.HorizontalScrollMode="Enabled"
+                            ScrollViewer.VerticalScrollMode="Disabled" SelectionMode="Single" Visibility="Visible" SelectionChanged="MyList_SelectionChanged" Tapped="MyList_DoubleTapped">
+
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal"></VirtualizingStackPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Grid>
+                                    <StackPanel Orientation="Vertical">
+                                        <Grid>
+                                        <TextBlock Text="{Binding Name}" TextAlignment="Left" Height="44" FontSize="25" Foreground="White"/>
+                                                <TextBlock Text="{Binding Score}" TextAlignment="Right" Height="44" FontSize="25" Foreground="White" FontFamily="QuartzMS.ttf#Quartz MS"/>
+                                            </Grid>
+                                            <Grid>
+                                                <Image Source="{Binding Image}" Width="200" Height="200" Opacity="{Binding opaic}"/>
+                                                <Image Source="{Binding Image2}" Width="200" Height="200" />
+                                            </Grid>
+                                            
+                                    </StackPanel>
+                                    <Image Source="Assets/NewSquare.png" Width="70" Height="70" Name="new_star" Visibility="{Binding new_visible}" />
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackPanel>
+                </ScrollViewer>
+        </Grid>
+
+
+
+        <Grid Name="choose_name_screen" Visibility="Visible" >
+
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="210" Width="350">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock TextAlignment="Left" Margin="-3,0,0,0" HorizontalAlignment="Left" Text="Player" Width="170" FontSize="20" Foreground="White"/>
+                        <TextBlock TextAlignment="Right" HorizontalAlignment="Left" Text="Lvl" Width="50" FontSize="20" Foreground="White"/>
+                        <TextBlock TextAlignment="Right" HorizontalAlignment="Left" Text="Score" Width="125" FontSize="20" Foreground="White"/>
+                    </StackPanel>
+
+                    <ListView x:Name="names_list" HorizontalAlignment="Center" Height="180" Width="350" HorizontalContentAlignment="Center"
+                    SelectionMode="Single" Visibility="Visible" SelectionChanged="name_list_SelectionChanged" >
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel Orientation="Vertical"></VirtualizingStackPanel>
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Grid Height="40" Background="YellowGreen" Width="350" Name="TitleRect">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock TextAlignment="Left" HorizontalAlignment="Left" Text="{Binding Name}" Width="180" FontSize="25" />
+                                            <TextBlock TextAlignment="Right" HorizontalAlignment="Left" Text="{Binding current_level}" Width="20" FontSize="25" FontFamily="QuartzMS.ttf#Quartz MS"/>
+                                            <TextBlock TextAlignment="Right" HorizontalAlignment="Left" Text="{Binding score}" Width="125" FontSize="25" FontFamily="QuartzMS.ttf#Quartz MS"/>
+                                        </StackPanel>
+                                    </Grid>
+
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+
+        <Grid Name="name_enter_screen" Visibility="Collapsed">
+
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="160" Width="300">
+                <StackPanel>
+                    <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextAlignment="Center" FontSize="35" TextWrapping="Wrap" Text="Name:" Foreground="White" VerticalAlignment="Top" Height="47" Width="300" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="player_name" FontSize="35"  Width="230" MaxLength="12" Text="" KeyDown="player_name_KeyDown" />
+                        <Button Content="OK" Foreground="White" FontSize="35" Width="70" Click="Button_name_ok" />
+                    </StackPanel>
+                    <TextBlock x:Name="textBlock1a" HorizontalAlignment="Left" TextAlignment="Center" FontSize="15" TextWrapping="Wrap" Text="please only use numbers or letters" VerticalAlignment="Top" Height="47" Width="300" Visibility="Collapsed" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+        
+  
+
+
+        <Grid Name="start_screen" Visibility="Visible" >
+
+
+           
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="140" Width="300" >
+                <StackPanel>
+
+                    <TextBlock  FontFamily="stocky.ttf#Stocky" x:Name="continue_button" Text="Continue" HorizontalAlignment="Center" FontSize="45" Foreground="YellowGreen" Tapped="continue_button_Tapped">
+                        <TextBlock.RenderTransform>
+                            <CompositeTransform Rotation="-4"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                    <Grid Height="10"></Grid>
+                    <TextBlock  FontFamily="stocky.ttf#Stocky" x:Name="new_player_button" Text="New Game" HorizontalAlignment="Center" FontSize="45" Foreground="YellowGreen"  Tapped="new_player_button_Tapped">
+                        <TextBlock.RenderTransform>
+                            <CompositeTransform Rotation="2"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Grid Name="game_title" Visibility="Visible" VerticalAlignment="Top">
+            <Image Source="Assets/paint_splat.png" Height="90" Width="500"  Stretch="Fill"></Image>
+            <TextBlock FontFamily="stocky.ttf#Stocky" Text="Radio Buggy" Name="GameTitle" HorizontalAlignment="Center" FontSize="49" Margin="0,20,0,0"  Foreground="#272c68"> 
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="-1"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Grid>
+        
+        <Grid Name="fade_screen" Background="Black" Opacity="1.0" Visibility="Collapsed"></Grid>
+    </SwapChainPanel>
+
+
+</Page>
